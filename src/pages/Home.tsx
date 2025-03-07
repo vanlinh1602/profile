@@ -63,27 +63,27 @@ export default function Home() {
                       <img
                         src="https://skillicons.dev/icons?i=react"
                         alt="React"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=ts"
                         alt="TypeScript"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=js"
                         alt="JavaScript"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=html"
                         alt="HTML"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=css"
                         alt="CSS"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                     </div>
                   </td>
@@ -101,17 +101,17 @@ export default function Home() {
                       <img
                         src="https://skillicons.dev/icons?i=mui"
                         alt="Material UI"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=bootstrap"
                         alt="Bootstrap"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=tailwind"
                         alt="Tailwind"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                     </div>
                   </td>
@@ -129,22 +129,22 @@ export default function Home() {
                       <img
                         src="https://skillicons.dev/icons?i=nodejs"
                         alt="Node.js"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=express"
                         alt="Express"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=nestjs"
                         alt="NestJS"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=bun"
                         alt="Bun"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                     </div>
                   </td>
@@ -162,22 +162,22 @@ export default function Home() {
                       <img
                         src="https://skillicons.dev/icons?i=mysql"
                         alt="MySQL"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=sqlite"
                         alt="SQLite"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=mongodb"
                         alt="MongoDB"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=firebase"
                         alt="Firebase"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                     </div>
                   </td>
@@ -195,17 +195,17 @@ export default function Home() {
                       <img
                         src="https://skillicons.dev/icons?i=vite"
                         alt="Vite"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=bots"
                         alt="Bots"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                       <img
                         src="https://skillicons.dev/icons?i=discordjs"
                         alt="Discord.js"
-                        className="hover:scale-110 transition-transform"
+                        className="w-8 sm:w-auto hover:scale-110 transition-transform"
                       />
                     </div>
                   </td>
