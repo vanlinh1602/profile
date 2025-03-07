@@ -245,7 +245,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
       </Route>
-    )
+    ),
+    {
+      basename: '/',
+    }
   );
 
   return <RouterProvider router={router} />;
