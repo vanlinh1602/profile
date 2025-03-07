@@ -1,8 +1,15 @@
 import './App.css';
 import './index.css';
 
-import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Link,
+  Outlet,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -20,20 +27,16 @@ const initializeDarkMode = () => {
   }
 };
 
-function App() {
+const AppLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.theme = isDark ? 'dark' : 'light';
+    setIsDarkMode(!isDarkMode);
   };
 
-  useEffect(() => {
-    initializeDarkMode();
-  }, []);
-
   return (
-    <Router>
+    <Suspense>
       <div className="min-h-screen bg-pink-50 dark:bg-slate-900 dark:text-white">
         {/* Navigation */}
         <nav className="p-6 flex justify-between items-center">
@@ -225,15 +228,27 @@ function App() {
             </button>
           </div>
         </nav>
-
-        {/* Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <Outlet />
       </div>
-    </Router>
+    </Suspense>
   );
+};
+
+function App() {
+  useEffect(() => {
+    initializeDarkMode();
+  }, []);
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<AppLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Route>
+    )
+  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
