@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
+import { useDarkMode } from './hooks/useDarkMode';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 
@@ -29,11 +30,8 @@ const initializeDarkMode = () => {
 
 const AppLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const { toggleDarkMode } = useDarkMode();
 
   return (
     <Suspense>
@@ -130,14 +128,14 @@ const AppLayout = () => {
           <div className="flex items-center gap-2">
             {/* Mobile Menu Button */}
             <div className="md:hidden relative z-10">
-              <button
+              <div
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={
-                  'hover:bg-gray-100 rounded-lg dark:hover:bg-slate-800 text-black p-2'
+                  'hover:bg-gray-100 rounded-lg dark:hover:bg-slate-800 text-black p-2 dark:text-white'
                 }
               >
                 ☰
-              </button>
+              </div>
 
               {/* Mobile Menu Dropdown */}
               {isMobileMenuOpen && (
@@ -219,13 +217,22 @@ const AppLayout = () => {
               )}
             </div>
 
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full ml-4 bg-slate-800 dark:bg-yellow-500 text-white dark:text-black"
-            >
-              <span className="block dark:hidden">🌙</span>
-              <span className="hidden dark:block">🌞</span>
-            </button>
+            <div onClick={toggleDarkMode} className="p-2 rounded-full ml-4">
+              <img
+                width="30"
+                height="30"
+                className="block dark:hidden"
+                src="https://img.icons8.com/?size=256&id=9313&format=png&color=89AC46"
+                alt="sun--v1"
+              />
+              <img
+                width="30"
+                className="hidden dark:block"
+                height="30"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3UlEQVR4nO2VwUobURSGs7DVLpQSLfOfIGTTlW/gCxQkoi3YN3BRKLgquBBJpVt9C/ERulKCc86EBKwrtWIj1JV7C1o9l95yJ4lJ1JnMSOJCcuDA3Dtn7nf/c//LZDKD6EGo0LxKbu7pwYxrFfx9OqDvzargyghZl+7ZzfUfHHiFe+DAKyRewO5lXhjBJyNgFTpXxkyqDTig4CrVru3uBBnBj+auG7mYWnkqpd/fDhvGftgmpt/OIPWW0TtlbKrgRBmXKnSqgq0byU0nWdcIVQyjHF0Q0FIDWrPV3LgyXdxR3pHK9E+ZNmwpMxQNBbe+AT9cxFQNFwyw0BjvxIFbJqL1SDDDv61l+A8WqdAfV2DLk9lwHHiFROC68qPQVEw1ZVqzpfxIh2qOgHaAZXy0be5bEvj9hLTDu5vAKfDpfft8qJxpx22sabiE8JVkYPY+11uHY1vKv7773vp4o4KzpGBl/EwEtgdTL43QXhOuTB9sJTvmztwwPrprlKbdKmQM40vXlruCDhf2KhnbsXDDWO059BZOy5FgZfzqF1iFDqPBqRybEsy4jFFMtf4pxkkceK1vZywoRoJtefKV+4v03lgI3NqR4CZcmb46o4X38PFmMnWzotgVOohBPIv4D9w67fx1MKCQAAAAAElFTkSuQmCC"
+                alt="partly-cloudy-night--v1"
+              />
+            </div>
           </div>
         </nav>
         <Outlet />
