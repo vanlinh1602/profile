@@ -277,7 +277,7 @@ export default function Home() {
               />
             </a>
             <a
-              href="mailto:linhnv1622@gmail.com"
+              href="mailto:nvlinh1622@gmail.com"
               target="blank"
               className="transform hover:scale-110 transition-transform"
             >

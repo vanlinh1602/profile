@@ -9,8 +9,19 @@ export default function Projects() {
       image: '/images/projects/qr-banking.png',
       technologies: ['React', 'Vite', 'Tailwind'],
       links: {
-        github: 'https://github.com/yourusername/qr-banking',
-        visit: 'https://qr-banking-demo.com',
+        github: 'https://github.com/vanlinh1602/qr-banking',
+        visit: 'https://qr.nvlinh.com',
+      },
+    },
+    {
+      title: 'Kuma bot',
+      description:
+        'A bot for Discord supporting auto checkin, redeem code, etc. for every Hoyoverse Game.',
+      image: '/images/projects/kuma-bot.png',
+      technologies: ['Discord JS', 'Typescript'],
+      links: {
+        github: 'https://github.com/monsieur-kuma/kuma-bot',
+        visit: 'https://monsieur-kuma.github.io/kuma-bot/',
       },
     },
     // Add more projects...
